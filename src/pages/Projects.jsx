@@ -1,24 +1,11 @@
 import Navbar from '../components/Navbar'
-// import { useState } from "react"
-// import { motion } from 'framer-motion'
 
 export default function Projects() {
 
     return (
         <div>
             <Navbar />
-            <div className="experiences">
-               <h1>Experiences</h1> 
-                <div className="jobs">
-                    <h2>Click on each job title for more details</h2>
-                </div>
-                <div className="certificates">
-                    
-                </div>
-                <div className="projects">
-
-                </div>
-            </div>
+            
         </div>
     )
 }

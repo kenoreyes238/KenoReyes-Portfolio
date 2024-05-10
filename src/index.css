@@ -1,8 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: 'Inter', system-ui;
   line-height: 1.5;
   font-weight: 400;
-  background-color: #1B2424;
+  background-color: #080708;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {

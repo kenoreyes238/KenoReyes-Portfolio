@@ -1,15 +1,24 @@
 .body-bg {
-  background-color: #1B2424;
+  background-color: #080708;
+}
+
+body {
+  color: white;
 }
 
 nav {
-  position: relative;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
-  color: #ffffff;
-  min-width: 25%;
-  padding-top: 4rem;
-  padding-left: 7rem;
+  padding: 5rem 5rem 1rem 5rem;
+  border-bottom: 2px solid white;
+
+
+  .mainNav {
+    display: flex;
+    flex-direction: row;
+  }
 
   h3 {
     font-weight: 700;
@@ -21,13 +30,13 @@ nav {
   ul {
     display: flex;
     flex-direction: row;
-    padding-right: 40rem;
     list-style: none;
     margin: 0;
 
     li {
       padding: 2rem;
       font-size: 1rem;
+      font-weight: 600;
     }
 
     li:hover {
@@ -38,7 +47,6 @@ nav {
   }
   
   img {
-    padding-top: 2em;
     padding-left: 2em;
 
     img.hover {
@@ -48,36 +56,190 @@ nav {
   }
 }
 
-.landing {
-  color: #ffffff;
+.landingPage {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
 
-  .aboutMe {
-    width: 60ch;
-    padding-top: 5rem;
-    padding-left: 8rem;
+  .landing {
+    display: flex;
+    flex-direction: row;
+    padding-left: 12rem;
 
-    h1 {
-      border-bottom: 4.5px white solid;
-      padding-bottom: 2rem;
+    .landingMe {
+      display: flex;
+      flex-direction: column;
+      width: 50ch;
+      padding-top: 5rem;
+
+      h1 {
+        border-bottom: 4.5px white solid;
+        padding-bottom: 2rem;
+        font-weight: 700;
+      }
+
+      h4 {
+        font-weight: 500;
+        padding-top: 2rem;
+        line-height: 2.5rem;
+      }
+
+      Button {
+        margin-top: 1rem;
+        font-weight: 400;
+        cursor: pointer;
+      }
     }
 
-    h4 {
-      font-weight: 500;
-      padding-top: 2rem;
-      line-height: 2.5rem;
-    }
+    .pic {
+      padding-left: 15rem;
+      padding-top: 4rem;
 
-    h5 {
-      font-weight: 400;
-      padding-top: 2rem;
-      cursor: pointer;
+      img {
+        width: 50rem;
+      }
     }
   }
 
-  .pic {
-    padding-left: 50rem;
+  .aboutMe {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    padding-left: 18rem;
+
+    h3 {
+      font-weight: 700;
+    }
+
+    h1 {
+      font-weight: 700;
+    }
+
+    .abtRow {
+      display: flex;
+      flex-direction: row;
+
+      img {
+        margin-top: 5rem;
+        width: 18rem;
+        height: 18rem;
+        border-radius: 50%;
+      }
+      
+      .description {
+        display: flex;
+        flex-direction: column;
+        padding-top: 3rem;
+
+        p {
+          padding-left: 8rem;
+          
+          font-size: 1.3rem;
+          width: 85ch;
+        }
+      }
+    }
+  }
+
+  .experience {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-left: 18rem;
+
+    .expHeader {
+      display: flex;
+      flex-direction: row;
+      border-top: 5px solid white;
+      padding-top: 1.5rem;
+      width: 80rem;
+
+      h1 {
+        font-weight: 700;
+      }
+
+      Button {
+        margin-left: 3rem;
+        font-size: 15px;
+        height: 45px;
+      }
+    }    
+  }
+
+  .expJobs {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3rem;
+
+    .exJobsHead {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h3 {
+      padding-top: 1rem;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    h4 {
+      padding-top: 0.5rem;
+    }
+
+    p {
+      font-size: 18px;
+      width: 60ch;
+      padding-top: 1rem;
+    }
+
+    .starbucks {
+      padding-left: 3rem;
+    }
+  }
+
+  .education {
+    display: flex; 
+    flex-direction: column;
+
+    h2 {
+      padding-top: 3rem;
+      font-weight: 700;
+    }
+
+    h4 {
+      padding-top: 2rem;
+      font-size: 2rem;
+    }
+
+    h5 {
+      padding-top: 0.5rem;
+    }
+
+    p {
+      padding-top: 0.5rem;
+      width: 95ch;
+      font-size: 18px;
+    }
+  }
+
+  .certificates {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      padding-top: 3rem;
+      font-weight: 700;
+    }
+
     img {
-      width: 50rem;
+      width: 600px;
+      margin: 1rem;
+    }
+
+    .row1 {
+      display: flex;
+      flex-direction: row;
+      padding-top: 1rem;
     }
   }
 }

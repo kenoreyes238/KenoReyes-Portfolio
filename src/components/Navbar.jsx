@@ -6,13 +6,14 @@ export default function Navbar() {
 
     return (
         <nav>
-            <h3 onClick={() => navigate("/")}>Keno Reyes</h3>
-            <ul className="navigation">
-                <li onClick={() => navigate("/about")}>About Me</li>
-                <li onClick={() => navigate("/projects")}>Projects</li>
-                <li onClick={() => navigate("/photos")}>Photos</li>
-                <li onClick={() => navigate("/contact")}>Contact Me</li>
-            </ul>
+            <div className="mainNav">
+                <h3 onClick={() => navigate("/")}>Keno Reyes</h3>
+                <ul className="navigation">
+                    <li onClick={() => navigate("/projects")}>Projects</li>
+                    <li onClick={() => navigate("/photos")}>Photos</li>
+                    <li onClick={() => navigate("/contact")}>Contact Me</li>
+                </ul>  
+            </div>
             <div className="pfLinks">
                 <a href='https://github.com/kenoreyes238'>
                     <img src='gitHub.png' alt='github logo' className="icons"/>
