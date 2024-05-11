@@ -7,12 +7,15 @@ body {
 }
 
 nav {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 5rem 5rem 1rem 5rem;
+  padding: 3rem 5rem 1rem 5rem;
   border-bottom: 2px solid white;
+  background-color: #080708;
 
 
   .mainNav {
@@ -241,5 +244,24 @@ nav {
       flex-direction: row;
       padding-top: 1rem;
     }
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  
+  .section {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10rem;
+    padding-top: 5rem;
+
+    h1 {
+      font-weight: 700;
+    }
+
+    
   }
 }

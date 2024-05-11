@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar'
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button"
+// import { SwipeCarousel } from '../components/SwipeCarousel';
 
 export default function Landing() {
 
