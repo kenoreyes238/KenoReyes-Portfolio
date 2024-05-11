@@ -9,7 +9,10 @@ export default function Projects() {
                 <h1>Projects</h1>
             </div>
             <div className="featuredProjects">
-                <iframe src="https://yapper-chat.netlify.app/" height={500} width={800}></iframe>
+                <div className="row1">
+                   <iframe src="https://yapper-chat.netlify.app/" height={800} width={800}></iframe> 
+                   <iframe src="https://kreyes-pokedex-search.netlify.app" height={800} width={800}></iframe>
+                </div>
             </div>
         </div>
     )
