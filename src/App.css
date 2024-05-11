@@ -266,12 +266,54 @@ nav {
     .featuredProjects {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       /* .row1 {
         display: flex;
         flex-direction: row;
         padding-left: 5rem;
       } */
+    }
+  }
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+
+  .picSection {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+
+    h1 {
+      padding-left: 13rem;
+      padding-bottom: 3rem;
+    }
+
+    h2 {
+      padding-left: 13rem;
+      padding-bottom: 3rem;
+    }
+
+    img {
+      width: 500px;
+    }
+
+    .row1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .row2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
