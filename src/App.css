@@ -262,6 +262,8 @@ nav {
       font-weight: 700;
     }
 
-    
+    .featuredProjects {
+      padding-left: 5rem;
+    }
   }
 }

@@ -9,7 +9,7 @@ export default function Projects() {
                 <h1>Projects</h1>
             </div>
             <div className="featuredProjects">
-                <iframe src="https://yapper-chat.netlify.app/"></iframe>
+                <iframe src="https://yapper-chat.netlify.app/" height={500} width={800}></iframe>
             </div>
         </div>
     )
