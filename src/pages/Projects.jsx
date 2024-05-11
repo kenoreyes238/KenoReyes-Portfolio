@@ -9,10 +9,12 @@ export default function Projects() {
                 <h1>Projects</h1>
             </div>
             <div className="featuredProjects">
-                <div className="row1">
-                   <iframe src="https://yapper-chat.netlify.app/" height={800} width={800}></iframe> 
-                   <iframe src="https://kreyes-pokedex-search.netlify.app" height={800} width={800}></iframe>
-                </div>
+                <iframe src="https://yapper-chat.netlify.app/" height={800} width={1200}></iframe> 
+                <iframe src="https://kreyes-pokedex-search.netlify.app" height={800} width={1200}></iframe>
+                <iframe src="https://shop-list-app-kreyes.netlify.app" height={800} width={1200}></iframe>
+                <iframe src="https://tic-tac-toe-kreyes.netlify.app" height={800} width={1200}></iframe>
+                <iframe src="https://bangers-drum-kit.netlify.app" height={800} width={1200}></iframe>
+                <iframe src="https://email-template-kreyes.netlify.app" height={800} width={1200}></iframe>
             </div>
         </div>
     )
