@@ -1,5 +1,6 @@
 import './App.css';
-// import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
+import Footer from "./components/Footer"
 import Landing from './pages/Landing';
 import Projects from './pages/Projects';
 import Photos from './pages/Photos'
@@ -13,12 +14,14 @@ export default function App() {
     return (
         <Router>
             {/* <AnimatedRoutes /> */}
-            <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Landing />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/photos" element={<Photos />} />
-            <Route path="/contact" element={<Contact />} />
+            <Navbar />
+                <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<Landing />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/photos" element={<Photos />} />
+                <Route path="/contact" element={<Contact />} />
          </Routes> 
+         <Footer />
         </Router>
     );
 }

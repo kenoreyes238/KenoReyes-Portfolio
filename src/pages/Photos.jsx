@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -7,7 +6,6 @@ import Image from "react-bootstrap/Image"
 export default function Photos() {
     return (
         <Container fluid className="photos">
-            <Navbar />
             {/* <div className="picSection">
                 <h1>Photos</h1>
                 <h2>WORK IN PROGRESS</h2>

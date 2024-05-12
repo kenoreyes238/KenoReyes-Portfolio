@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar'
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -28,7 +27,6 @@ export default function Projects() {
 
     return (
         <Container fluid className="projects">
-            <Navbar />
             <Row className="projectHead">
                 <h1>Projects</h1>
             </Row>

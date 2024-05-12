@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar'
 import { useNavigate } from "react-router-dom"
 import Button from "react-bootstrap/Button"
 import Container from "react-bootstrap/Container"
@@ -16,16 +15,15 @@ export default function Landing() {
 
     return (
         <Container fluid className="landingPage">
-            <Navbar />
             <Row className="landing">
-                <Col lg={5}>
+                <Col lg={4}>
                     <div className="landingMe">
                         <h1>Frontend Developer & Photographer</h1>
                         <h4>A web developer and photographer in the Sacramento Area. Currently an intern at Bay Valley Tech</h4>
                         <Button onClick={() => navigate("/projects")} variant="outline-light">Click to view my projects &gt;</Button>
                     </div>
                 </Col>
-                <Col lg={6} className="pic">
+                <Col lg={5} className="pic">
                     <img src="IMG_0056.JPG" alt="photograph"/> 
                     {/* <SwipeCarousel /> */}
                 </Col>

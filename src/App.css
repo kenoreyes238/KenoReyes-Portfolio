@@ -1,9 +1,9 @@
 .body-bg {
-  background-color: #080708;
+  background-color: #121212;
 }
 
 body {
-  color: white;
+  color: rgb(241, 241, 241);
 }
 
 nav {
@@ -14,7 +14,7 @@ nav {
   justify-content: space-between;
   padding: 3rem 5rem 1rem 5rem;
   border-bottom: 2px solid white;
-  background-color: #080708;
+  background-color: #121212;
 
 
   .mainNav {
@@ -58,11 +58,29 @@ nav {
   }
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid white;
+  padding: 2rem;
+
+  h1 {
+    padding-top: 0.5rem;
+    padding-right: 2rem;
+  }
+
+  a {
+    margin: 1rem;
+  }
+}
+
 .landingPage {
   margin-bottom: 5rem;
 
   .landing {
-    padding-left: 12rem;
+    padding-left: 18rem;
 
     .landingMe {
       width: 50ch;
