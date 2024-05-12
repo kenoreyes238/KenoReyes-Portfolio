@@ -1,11 +1,14 @@
 import Navbar from "../components/Navbar"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 import Image from "react-bootstrap/Image"
 
 export default function Photos() {
     return (
-        <div className="photos">
+        <Container fluid className="photos">
             <Navbar />
-            <div className="picSection">
+            {/* <div className="picSection">
                 <h1>Photos</h1>
                 <h2>WORK IN PROGRESS</h2>
                 <div className="row1">
@@ -17,7 +20,7 @@ export default function Photos() {
                     <Image src="swim.JPG" rounded />
                     <Image src="reyes_keno_mainstage(2).jpg" rounded />
                 </div>
-            </div>
-        </div>
+            </div> */}
+        </Container>
     )
 }

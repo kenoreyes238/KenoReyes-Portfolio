@@ -12,7 +12,6 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
   padding: 3rem 5rem 1rem 5rem;
   border-bottom: 2px solid white;
   background-color: #080708;
@@ -60,18 +59,12 @@ nav {
 }
 
 .landingPage {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 
   .landing {
-    display: flex;
-    flex-direction: row;
     padding-left: 12rem;
 
     .landingMe {
-      display: flex;
-      flex-direction: column;
       width: 50ch;
       padding-top: 5rem;
 
@@ -95,7 +88,7 @@ nav {
     }
 
     .pic {
-      padding-left: 15rem;
+      padding-left: 1rem;
       padding-top: 4rem;
 
       img {
@@ -105,8 +98,6 @@ nav {
   }
 
   .aboutMe {
-    display: flex;
-    flex-direction: column;
     padding-top: 4rem;
     padding-left: 18rem;
 
@@ -118,35 +109,27 @@ nav {
       font-weight: 700;
     }
 
-    .abtRow {
-      display: flex;
-      flex-direction: row;
-
       img {
-        margin-top: 5rem;
+        margin-top: 2rem;
         width: 18rem;
         height: 18rem;
         border-radius: 50%;
       }
       
       .description {
-        display: flex;
-        flex-direction: column;
         padding-top: 3rem;
 
         p {
-          padding-left: 8rem;
+          padding-left: 3rem;
           
           font-size: 1.3rem;
           width: 85ch;
         }
       }
-    }
+    
   }
 
   .experience {
-    display: flex;
-    flex-direction: column;
     padding-top: 3rem;
     padding-left: 18rem;
 
@@ -155,14 +138,14 @@ nav {
       flex-direction: row;
       border-top: 5px solid white;
       padding-top: 1.5rem;
-      width: 80rem;
+      width: 85rem;
 
       h1 {
         font-weight: 700;
       }
 
       Button {
-        margin-left: 3rem;
+        margin-left: 7rem;
         font-size: 15px;
         height: 45px;
       }
@@ -170,14 +153,7 @@ nav {
   }
 
   .expJobs {
-    display: flex;
-    flex-direction: row;
     padding-top: 3rem;
-
-    .exJobsHead {
-      display: flex;
-      flex-direction: column;
-    }
 
     h3 {
       padding-top: 1rem;
@@ -194,18 +170,12 @@ nav {
       width: 60ch;
       padding-top: 1rem;
     }
-
-    .starbucks {
-      padding-left: 3rem;
-    }
   }
 
   .education {
-    display: flex; 
-    flex-direction: column;
+    padding-top: 3rem;
 
     h2 {
-      padding-top: 3rem;
       font-weight: 700;
     }
 
@@ -228,7 +198,6 @@ nav {
   .certificates {
     display: flex;
     flex-direction: column;
-
     h2 {
       padding-top: 3rem;
       font-weight: 700;
@@ -237,6 +206,7 @@ nav {
     img {
       width: 600px;
       margin: 1rem;
+      border-radius: 3px;
     }
 
     .row1 {
@@ -247,14 +217,14 @@ nav {
   }
 }
 
+Carousel {
+  min-height: 50rem;
+}
+
 .projects {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   
-  .section {
-    display: flex;
-    flex-direction: row;
+  .projectHead {
     padding-left: 10rem;
     padding-top: 5rem;
 
@@ -262,19 +232,71 @@ nav {
       font-weight: 700;
       padding-bottom: 3rem;
     }
+  }
 
-    .featuredProjects {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+  .oddNum {
+    padding-left: 10rem;
+    margin-bottom: 3rem;
 
-      /* .row1 {
-        display: flex;
-        flex-direction: row;
-        padding-left: 5rem;
-      } */
+    h1 {
+      padding-top: 1rem;
     }
+
+    img {
+      width: 65rem;
+    }
+
+    .description {
+      padding-left: 2rem;
+
+      h4 {
+        padding-top: 5rem;
+        width: 30ch;
+        font-weight: 400;
+      }
+    }
+    
+  }
+
+  .evenNum {
+    padding-left: 10rem;
+    margin-bottom: 3rem;
+
+    h1 {
+      padding-top: 1rem;
+      padding-left: 52rem;
+    }
+
+    img {
+      width: 65rem;
+      padding-right: 10rem;
+    }
+
+    h4 {
+      padding-top: 5rem;
+      width: 30ch;
+      font-weight: 400;
+    }
+  }
+
+  .yapper {
+    margin-top: 15rem;
+  }
+
+  .pokedex {
+    margin-top: 10rem;
+  }
+
+  .shopping {
+    margin-top: 12rem;
+  }
+
+  .game {
+    margin-top: 10rem;
+  }
+
+  .email {
+    margin-top: 10.5rem;
   }
 }
 

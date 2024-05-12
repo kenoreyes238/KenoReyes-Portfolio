@@ -1,7 +1,10 @@
 import Navbar from '../components/Navbar'
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 import Button from "react-bootstrap/Button"
-// import { SwipeCarousel } from '../components/SwipeCarousel';
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+// import SwipeCarousel from '../components/SwipeCarousel';
 
 export default function Landing() {
 
@@ -12,24 +15,28 @@ export default function Landing() {
     }
 
     return (
-        <div className="landingPage">
+        <Container fluid className="landingPage">
             <Navbar />
-            <div className="landing">
-                <div className="landingMe">
-                    <h1>Frontend Developer & Photographer</h1>
-                    <h4>A web developer and photographer in the Sacramento Area. Currently an intern at Bay Valley Tech</h4>
-                    <Button onClick={() => navigate("/projects")} variant="outline-light">Click to view my projects -&gt;</Button>
-                </div>
-                <div className="pic">
-                    <img src="IMG_0056.JPG" /> 
-                </div>
-            </div>
-            <div className="aboutMe">
-                <h3>About</h3>
-                <h1>Keno Reyes</h1>
-                <div className="abtRow">
-                   <img src="mask1.png" /> 
-                   <div className="description">
+            <Row className="landing">
+                <Col lg={5}>
+                    <div className="landingMe">
+                        <h1>Frontend Developer & Photographer</h1>
+                        <h4>A web developer and photographer in the Sacramento Area. Currently an intern at Bay Valley Tech</h4>
+                        <Button onClick={() => navigate("/projects")} variant="outline-light">Click to view my projects &gt;</Button>
+                    </div>
+                </Col>
+                <Col lg={6} className="pic">
+                    <img src="IMG_0056.JPG" alt="photograph"/> 
+                    {/* <SwipeCarousel /> */}
+                </Col>
+            </Row>
+            <Row className="aboutMe">
+                <Col md={3}>
+                    <h3>About</h3>
+                    <h1>Keno Reyes</h1>
+                    <img src="mask1.png" alt="portrait"/>
+                </Col>
+                <Col className="description">
                     <p>
                         Keno Reyes is a Sacramento based web developer who specializes in front-end work using react JS. 
                         Keno has worked on team projects, as well as some independent projects during his time at Bay Valley Tech.
@@ -46,17 +53,16 @@ export default function Landing() {
                         or with friends, which includes: swimming, rock climbing, etc. Besides staying healthy and fit, he likes to play some
                         games on his pc, go on trips, and just overall have some fun and keeping his life in balance. 
                     </p>
-                   </div>
-                </div>
-            </div>
-            <div className="experience">
-                <div className="expHeader">
-                   <h1>Experiences</h1> 
-                   <a onClick={resumeClick}>
-                        <Button variant="outline-light">Click to view Resume</Button>
-                   </a>
-                </div>
-                <div className="expJobs">
+                </Col>
+            </Row>
+            <Row className="experience">
+                    <div className="expHeader">
+                        <h1>Experiences</h1> 
+                        <a onClick={resumeClick}>
+                            <Button variant="outline-light">Click to view Resume</Button>
+                        </a>
+                    </div>
+                <Col className="expJobs">
                     <div className="expJobsHead">
                         <h3>Bay Valley Tech</h3>
                         <h4>November 2023 - Present</h4>
@@ -68,7 +74,9 @@ export default function Landing() {
                             professional projects.
                         </p>
                     </div>
-                    <div className="expJobsHead starbucks">
+                </Col>
+                <Col lg={6} className="expJobs">
+                    <div className="expJobsHead">
                         <h3>Starbucks</h3>
                         <h4>October 2021 - December 2023</h4>
                         <p>
@@ -78,18 +86,20 @@ export default function Landing() {
                             customer orders and making drinks.    
                         </p> 
                     </div>
-                </div>
-                <div className="education">
-                    <h2>Education</h2>
-                    <h4>Cosumnes River College</h4>
-                    <h5>Major: Computer Science | August 2021 - Present</h5>
-                    <p>
-                        <strong>Relevant Coursework:</strong> Introduction to Computer Info Science,
-                        Introduction to Structured Programming, Algorithm Design/ Problem Solving with 
-                        C++, Introduction to Object-Oriented Programming with Java
-                    </p>
-                </div>
-                <div className="certificates">
+                </Col>
+                <Col lg={6}>
+                    <Row className="education">
+                        <h2>Education</h2>
+                        <h4>Cosumnes River College</h4>
+                        <h5>Major: Computer Science | August 2021 - Present</h5>
+                        <p>
+                            <strong>Relevant Coursework:</strong> Introduction to Computer Info Science,
+                            Introduction to Structured Programming, Algorithm Design/ Problem Solving with 
+                            C++, Introduction to Object-Oriented Programming with Java
+                        </p>
+                    </Row>
+                </Col>
+                <Col className="certificates">
                     <h2>Certificates</h2>
                     <div className="row1">
                         <img src="HTML.jpg"  alt="HTML Module Certification"/>
@@ -103,8 +113,8 @@ export default function Landing() {
                         <img src="AsyncJS.jpg" alt="Async JavaScript Certification" />
                         <img src="ReactJS.jpg" alt="ReactJS Certification" />
                     </div>
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Row>
+        </Container>
     )
 }
