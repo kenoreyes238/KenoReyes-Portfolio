@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'Inter', system-ui;
+  font-family: 'Poppins' system-ui;
   line-height: 1.5;
   font-weight: 400;
-  background-color: #080708;
+  background-color: #121212;
 }
 
 ::-webkit-scrollbar {

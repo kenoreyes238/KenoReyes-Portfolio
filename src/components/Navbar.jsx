@@ -17,5 +17,3 @@ export default function Navbar() {
         </nav>
     )
 }
-
-// onClick={() => navigate("/AboutMe")
