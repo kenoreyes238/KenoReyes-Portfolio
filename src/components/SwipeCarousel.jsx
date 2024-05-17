@@ -7,10 +7,16 @@ export default function SwipeCarousel() {
         <img src="YapperChat.png" />
       </Carousel.Item>
       <Carousel.Item>
-      <img src="Pokedex.png" />
+        <img src="Pokedex.png" />
       </Carousel.Item>
       <Carousel.Item>
-      <img src="shopping.png" />
+        <img src="shopping.png" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img src="game.png" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img src="DrumKit.png" />
       </Carousel.Item>
     </Carousel>
   );

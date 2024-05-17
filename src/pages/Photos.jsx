@@ -19,6 +19,7 @@ export default function Photos() {
                     <Image src="reyes_keno_mainstage(2).jpg" rounded />
                 </div>
             </div> */}
+            <h1>COMING SOON</h1>
         </Container>
     )
 }

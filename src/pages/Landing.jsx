@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-// import SwipeCarousel from '../components/SwipeCarousel';
+import SwipeCarousel from '../components/SwipeCarousel';
 
 export default function Landing() {
 
@@ -24,8 +24,8 @@ export default function Landing() {
                     </div>
                 </Col>
                 <Col lg={5} className="pic">
-                    <img src="IMG_0056.JPG" alt="photograph"/> 
-                    {/* <SwipeCarousel /> */}
+                    {/* <img src="IMG_0056.JPG" alt="photograph"/>  */}
+                    <SwipeCarousel />
                 </Col>
             </Row>
             <Row className="aboutMe">
@@ -49,7 +49,7 @@ export default function Landing() {
                     <p>
                         During his free time, he likes to work out at the gym. He also enjoys doing recreational activities with either himself
                         or with friends, which includes: swimming, rock climbing, etc. Besides staying healthy and fit, he likes to play some
-                        games on his pc, go on trips, and just overall have some fun and keeping his life in balance. 
+                        games on his pc and go on trips. 
                     </p>
                 </Col>
             </Row>
