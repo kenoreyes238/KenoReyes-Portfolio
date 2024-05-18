@@ -10,7 +10,7 @@ export default function Landing() {
     const navigate = useNavigate();
 
     const resumeClick = () => {
-        window.open("Resume1.pdf");
+        window.open("Keno Reyes Resume.pdf");
     }
 
     return (
