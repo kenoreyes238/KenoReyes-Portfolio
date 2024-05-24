@@ -3,31 +3,28 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
-import { db } from "../firebase"
-import { useState } from "react"
-import { collection, addDoc } from "firebase/firestore"
+import emailjs from "@emailjs/browser"
+import { useRef } from "react"
 
 export default function Contact() {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
+    const form = useRef();
 
-    const handleSubmit = async (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
-        try {
-            await addDoc(collection(db, "contacts"), {
-                name: name,
-                email: email,
-                message: message,
-            });
-            console.log("message sent");
-            setName("");
-            setEmail("");
-            setMessage(""); 
-        } catch (error) {
-            console.error(error);
-        }
-    };
+    
+        emailjs
+          .sendForm('SERVICE_KEY', 'TEMPLATE_KEY', form.current, {
+            publicKey: 'PUBLIC_KEY',
+          })
+          .then(
+            () => {
+              console.log('SUCCESS!');
+            },
+            (error) => {
+              console.log('FAILED...', error.text);
+            },
+          );
+      };
 
     return (
         <Container className="contact" fluid>
@@ -45,14 +42,14 @@ export default function Contact() {
                         <img src='instagram.png' alt='insta logo' className="icons"/>  
                     </a>   
                     </div>
-                    <Form onSubmit={handleSubmit}>
+                    <Form ref={form} onSubmit={sendEmail}>
                         <Form.Group className="mb-3" controlId="formBasicName">
                             <Form.Label>Name</Form.Label>
                             <Form.Control 
                                 type="name" 
                                 placeholder="Enter first and last name"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
+                                name="user_email"
+                                required
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -60,8 +57,8 @@ export default function Contact() {
                             <Form.Control 
                                 type="email" 
                                 placeholder="Enter email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}    
+                                name="user_email"
+                                required  
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicMessage">
@@ -69,8 +66,7 @@ export default function Contact() {
                             <Form.Control 
                                 as="textarea" 
                                 rows={5}
-                                value={message}
-                                onChange={(e) => setMessage(e.target.value)}
+                                name="message"
                             />
                         </Form.Group>
                         <Button variant="secondary" type="submit">

@@ -18,7 +18,7 @@ export default function Landing() {
             <Row className="landing">
                 <Col lg={4}>
                     <div className="landingMe">
-                        <h1>Frontend Developer & Photographer</h1>
+                        <h1>Web Developer & Photographer</h1>
                         <h4>A web developer and photographer in the Sacramento Area. Currently an intern at Bay Valley Tech</h4>
                         <Button onClick={() => navigate("/projects")} variant="outline-light">Click to view my projects &gt;</Button>
                     </div>
