@@ -28,7 +28,6 @@ nav {
     font-weight: 700;
     font-size: 2rem;
     padding: 1.5rem;
-    cursor: pointer;
   }
 
   ul {
@@ -349,6 +348,14 @@ Carousel {
 
   .email {
     margin-top: 10.5rem;
+  }
+
+  .inventory {
+    margin-top: 9rem; 
+  }
+
+  .backRep {
+    margin-left: 1rem;
   }
 }
 

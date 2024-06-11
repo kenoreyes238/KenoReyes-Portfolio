@@ -5,6 +5,14 @@ import Button from "react-bootstrap/Button"
 
 export default function Projects() {
 
+    const viewInventoryFront = () => {
+        window.open("https://github.com/kenoreyes238/keno-reyes-final-project-front");
+    }
+
+    const viewInventoryBack = () => {
+        window.open("https://github.com/kenoreyes238/keno-reyes-final-project-back");
+    }
+
     const viewYapperChat = () => {
         window.open("https://yapper-chat.netlify.app/");
     }
@@ -31,14 +39,36 @@ export default function Projects() {
                 <h1>Projects</h1>
             </Row>
             <Row className="oddNum">
+               {/* YAPPER JOBS COMING SOON  */}
+            </Row>
+            <Row className="evenNum">
+                <Col className="description">
+                    <h3>MyInventory</h3>
+                    <h4>
+                        A simple inventory app that keeps track of product in stock. 
+                        Can add, edit, and delete products shown in the database.
+                    </h4>
+                    <a onClick={viewInventoryFront}>
+                       <Button variant="light" className="inventory">View Front-End Repo</Button> 
+                    </a>
+                    <a onClick={viewInventoryBack} className="backRep">
+                       <Button variant="light" className="inventory">View Back-End Repo</Button> 
+                    </a>
+                </Col>
+                <Col>
+                    <img src="MyInventory.png" alt="MyInventory App"/>
+                    <h1>01</h1>
+                </Col>
+            </Row>
+            <Row className="oddNum">
                 <Col>
                     <img src="YapperChat.png" alt="Yapper Chat"/>
-                    <h1>01</h1>
+                    <h1>02</h1>
                 </Col>
                 <Col className="description">
                     <h3>Yapper Chat</h3>
                     <h4>
-                        A messaging app that let's you chat with other users in a 
+                        A messaging app that let&apos;s you chat with other users in a 
                         group channel, or chat with one user in a private direct-message.
                     </h4>
                     <a onClick={viewYapperChat}>
@@ -59,13 +89,13 @@ export default function Projects() {
                 </Col>
                 <Col>
                     <img src="Pokedex.png" alt="Pokedex Search" />
-                    <h1>02</h1>
+                    <h1>03</h1>
                 </Col>
             </Row>
             <Row className="oddNum">
                 <Col>
                     <img src="shopping.png" alt="Shopping List App"/>
-                    <h1>03</h1>
+                    <h1>04</h1>
                 </Col>
                 <Col className="description">
                     <h3>Shopping List App</h3>
@@ -92,13 +122,13 @@ export default function Projects() {
                 </Col>
                 <Col>
                     <img src="game.png" alt="Tic Tac Toe Game" />
-                    <h1>04</h1>
+                    <h1>05</h1>
                 </Col>
             </Row>
             <Row className="oddNum">
                 <Col>
                     <img src="BootstrapEmail.jpg" alt="Email Bootstrap template"/>
-                    <h1>05</h1>
+                    <h1>06</h1>
                 </Col>
                 <Col className="description">
                     <h3>Bootstrap Email Template</h3>

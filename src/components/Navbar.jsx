@@ -7,10 +7,10 @@ export default function Navbar() {
     return (
         <nav>
             <div className="mainNav">
-                <h3 onClick={() => navigate("/")}>Keno Reyes</h3>
+                <h3>Keno Reyes</h3>
                 <ul className="navigation">
+                    <li onClick={() => navigate("/")}>About Me</li>
                     <li onClick={() => navigate("/projects")}>Projects</li>
-                    <li onClick={() => navigate("/photos")}>Photos</li>
                     <li onClick={() => navigate("/contact")}>Contact Me</li>
                 </ul>  
             </div>

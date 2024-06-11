@@ -3,28 +3,31 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
-import emailjs from "@emailjs/browser"
-import { useRef } from "react"
+import { db } from "../firebase"
+import { useState } from "react"
+import { collection, addDoc } from "firebase/firestore"
 
 export default function Contact() {
-    const form = useRef();
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
 
-    const sendEmail = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-    
-        emailjs
-          .sendForm('SERVICE_KEY', 'TEMPLATE_KEY', form.current, {
-            publicKey: 'PUBLIC_KEY',
-          })
-          .then(
-            () => {
-              console.log('SUCCESS!');
-            },
-            (error) => {
-              console.log('FAILED...', error.text);
-            },
-          );
-      };
+        try {
+            await addDoc(collection(db, "contacts"), {
+                name: name,
+                email: email,
+                message: message,
+            });
+            console.log("message sent");
+            setName("");
+            setEmail("");
+            setMessage(""); 
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     return (
         <Container className="contact" fluid>
@@ -39,17 +42,17 @@ export default function Contact() {
                         <img src='linkedin.png' alt='linkedin logo' className="icons"/>  
                     </a>
                     <a href='https://www.instagram.com/kxnor.dev?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='>
-                        <img src='instagram.png' alt='insta logo' className="icons"/>  
+                        <img src='instagram.png' alt='instagram logo' className="icons"/>  
                     </a>   
                     </div>
-                    <Form ref={form} onSubmit={sendEmail}>
+                    <Form onSubmit={handleSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicName">
                             <Form.Label>Name</Form.Label>
                             <Form.Control 
                                 type="name" 
                                 placeholder="Enter first and last name"
-                                name="user_email"
-                                required
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -57,8 +60,8 @@ export default function Contact() {
                             <Form.Control 
                                 type="email" 
                                 placeholder="Enter email"
-                                name="user_email"
-                                required  
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}    
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicMessage">
@@ -66,7 +69,8 @@ export default function Contact() {
                             <Form.Control 
                                 as="textarea" 
                                 rows={5}
-                                name="message"
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
                             />
                         </Form.Group>
                         <Button variant="secondary" type="submit">

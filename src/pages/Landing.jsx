@@ -18,8 +18,8 @@ export default function Landing() {
             <Row className="landing">
                 <Col lg={4}>
                     <div className="landingMe">
-                        <h1>Web Developer & Photographer</h1>
-                        <h4>A web developer and photographer in the Sacramento Area. Currently an intern at Bay Valley Tech</h4>
+                        <h1>Full-Stack Web Developer</h1>
+                        <h4>A full-stack web developer in the Sacramento Area. Currently an intern at Bay Valley Tech</h4>
                         <Button onClick={() => navigate("/projects")} variant="outline-light">Click to view my projects &gt;</Button>
                     </div>
                 </Col>
@@ -40,11 +40,6 @@ export default function Landing() {
                         Keno has worked on team projects, as well as some independent projects during his time at Bay Valley Tech.
                         Although he does mostly front-end work, he also works on some back-end development using Firebase, Node.js, 
                         mySQL, and Express. 
-                    </p>
-                    <p>
-                        Occasionally, Keno also does some photography on the side, photoshooting for events, portraits, landscapes and cars.
-                        His passion started in high school when he attended a photography and later developed his skills as a member of 
-                        the Yearbook Staff.
                     </p>
                     <p>
                         During his free time, he likes to work out at the gym. He also enjoys doing recreational activities with either himself
